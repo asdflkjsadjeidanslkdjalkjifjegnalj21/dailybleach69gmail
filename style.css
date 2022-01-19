@@ -1,0 +1,73 @@
+.text-light
+{
+    color: #FFFBFF !important;
+}
+
+.active
+{
+   color: #36baee !important; 
+   font-weight: bold;
+}
+
+.shut-the-fuck-up-willem
+{
+    position: relative;
+    margin-top: 20%;
+    margin-right: 10%;
+}
+
+body
+{
+    background-image: url("bg.jpg");
+}
+
+.text-box-margin
+{
+    margin: 20px;
+}
+
+.block-main
+{
+    border-radius: 25px ;
+}
+
+.boek-container-1   
+{
+    position: relative;
+    margin-top: 6%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-top: 4%;
+    padding-bottom: 5px;
+}
+
+.boek-container-2
+{
+    position: relative;
+    margin-top: 6%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.image-scale
+{
+    max-width: 100%;
+    max-height: 100%;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.border-rad
+{
+        border-radius: 5px;
+}
+
+.custom-file-label::after
+{
+    content:"Bladeren";
+}
+
+.details-btn, .verwijder-btn
+{
+    margin: 10px;
+}
