@@ -1,0 +1,131 @@
+Voorbeeld Procedure afhandeling tickets
+
+
+Inhoud
+
+Algemeen    2
+Ticketcategorieën    2
+Ticketstatus    2
+Dagelijkse toewijzing tickets    2
+Tickets met categorie Spoed, Open of Wens    3
+Tickets met status Doorgevoerd    3
+Tickets met status Beheer    3
+Controle van het functioneel en technisch ontwerp    4
+Controle bronbestanden    4
+Controle databasescript    4
+Controle aanpassingendocument    4
+Controle testrapport    5
+Afronden ticket    5
+
+Algemeen
+Het onderhoud en beheer van door Young Dogz ontwikkelde applicaties wordt gestuurd door de ticketlijst. Elke applicatie heeft een eigen ticketlijst. Op deze lijst staan alle ontwikkelactiviteiten voor een applicatie. Op deze manier ontstaat samen met het document versiebeheer een goed beeld van de veranderingen die een applicatie heeft ondergaan.
+
+De gebruikers van de applicaties van Young Dogz kunnen de fouten en wensen die ze tijdens het gebruik van de applicatie tegenkomen, melden bij de supportafdeling van Young Dogz. De supportmedewerkers van Young Dogz proberen elke fout of wens zo goed mogelijk te omschrijven en schatten in op welke applicatie dat ticket betrekking heeft. Ze hebben geen diepgaande kennis van alle applicaties die door Young Dogz zijn ontwikkeld. Het is daarom altijd een inschatting voor welke applicatie een ticket geldt.
+
+Ticketcategorieën
+Een ticket krijgt een van de volgende categorieën.
+Categorie
+Omschrijving
+Spoed
+Ticket onmiddellijk oplossen.
+Open
+Ticket meenemen in de planning van de komende week.
+Wens
+Ticket meenemen in de planning van de komende maand.
+Project
+Ticket is een nieuwbouwproject.
+Onuitvoerbaar
+Ticket is NIET uitvoerbaar en wordt NIET opgelost.
+
+
+Ticketstatus
+Een ticket heeft een van de volgende statussen.
+Status
+Omschrijving
+Bezet
+Ticket is in behandeling bij de afdeling Applicatieontwikkeling.
+Doorgevoerd
+Ticket is afgehandeld door de afdeling Applicatieontwikkeling.
+Retour
+Ticket is niet oplosbaar.
+Incompleet
+De documentatie is niet op orde.
+Test
+Ticket is in behandeling bij het testteam van de supportafdeling.
+Beheer
+Ticket is getest door het testteam van de supportafdeling en akkoord bevonden.
+Afgerond
+Ticket is opgelost.
+
+
+Dagelijkse toewijzing tickets
+De applicatieontwikkelaars van Young Dogz bepalen aan het begin van elke werkdag gezamenlijk welke openstaande tickets ieder voor die dag op zich neemt. Dat is uiteraard afhankelijk van de beschikbare tijd en van andere activiteiten die dag.
+
+Een uitzondering hierop zijn de spoedtickets die direct moeten worden behandeld. Als de supportafdeling van Young Dogz een ticket aanmaakt waarbij ingeschat wordt dat die direct moet worden opgelost, dan ontvangen de applicatieontwikkelaars een alert, waarna zij direct onderling overleggen wie dat ticket oplost.
+
+Tickets met categorie Spoed, Open of Wens
+Voor de tickets met categorie Spoed, Open of Wens worden de volgende stappen ondernomen.
+Controle van de categorie en status
+Is het omschreven probleem duidelijk?
+Zo nee, dan moet worden achterhaald wat het probleem precies is.
+Heeft het ticket betrekking op de aangegeven applicatie?
+Zo nee, dan krijgt dit ticket alsnog de status Retour en is het ticket (voorlopig) afgehandeld.
+Beschrijft het ticket een softwareprobleem?
+Zo nee, dan krijgt dit ticket alsnog de status Retour en is het ticket (voorlopig) afgehandeld.
+Past het ticket binnen het SLA?
+Zo nee dan krijgt dit ticket alsnog de status Onuitvoerbaar en is het ticket afgehandeld.
+Past het ticket binnen het programma van eisen, het functioneel ontwerp en het SLA?
+Als de oplossing meer dan twee uur kost, dan krijgt dit ticket alsnog de categorie Project en is het ticket afgehandeld.
+Mogelijke oplossing?
+Als er een oplossing voorhanden is, passend binnen het programma van eisen en het SLA, dan wordt het ticket aan het aanpassingendocument van de applicatie toegevoegd en de oplossing wordt doorgevoerd.
+Doorvoeren van de gekozen oplossing
+De gekozen oplossing wordt in de database en/of de broncode van de applicatie aangebracht en daar ook gedocumenteerd.
+De uitgevoerde oplossing wordt gedocumenteerd in het aanpassingendocument.
+Het ticket krijgt de status Doorgevoerd.
+
+De programmeur doet de programmeurstest (test of het programma technisch foutloos werkt) voor de gekozen oplossing. De acceptatietest wordt door het testteam van de supportafdeling zo nodig samen met de gebruikers uitgevoerd. Het testteam zorgt voor een volledig en actueel testrapport.
+
+Tickets met status Doorgevoerd
+De tickets met status Doorgevoerd worden aan het testteam van de supportafdeling toegewezen en daar getest. Hier wordt een volledig en actueel testrapport voor dit ticket gemaakt. Als de wijzigingen naar tevredenheid zijn doorgevoerd, zet het testteam de status op Beheer.
+
+Tickets met status Beheer
+Op de afdeling applicatieontwikkeling wordt voor de tickets met status Beheer een beheerslag uitgevoerd, voordat het ticket wordt afgerond. Dat wil zeggen dat de applicatiedocumentatie nog eens wordt gecontroleerd op volledigheid en actualiteit. Waar nodig wordt deze aangevuld.
+Onder applicatiedocumentatie wordt het volgende verstaan.
+Het functioneel ontwerp
+Het technisch ontwerp
+De bronbestanden
+Het databasescript
+Het document versiebeheer
+Het testrapport
+
+Overal in de documentatie wordt het ticketnummer vermeld. Om de ticketnummers in de documentatie gemakkelijk te kunnen terugvinden, wordt dit nummer tussen dubbele rechte haken geplaatst. Bijvoorbeeld ‘Gewijzigd n.a.v. ticketnummer [[1726]]’.
+Zie hiervoor ook de Coding conventions van Young Dogz.
+
+Controle van het functioneel en technisch ontwerp
+In het functioneel en technisch ontwerp worden de volgende controles uitgevoerd.
+Elke wijziging moet onder vermelding van het ticketnummer worden opgenomen. Heeft een ticket geen wijziging tot gevolg? Dan wordt het ticketnummer aan het einde van het document toch toegevoegd met de tekst ‘Geen wijzigingen’.
+Als het ticketnummer er nog niet in voorkomt, dan moet het functioneel en/of technisch ontwerp op de juiste plaats worden aangepast onder vermelding van het ticketnummer.
+
+Controle bronbestanden
+Voor de bronbestanden van de applicatie worden de volgende controles uitgevoerd.
+Op de plaats(en) van de wijziging(en) in de broncode wordt het ticketnummer vermeld in een commentaarregel, een en ander volgens de coding conventions van Young Dogz.
+Indien het ticketnummer niet voorkomt, maar er wel wijzigingen zijn aangebracht, dan krijgt het ticket de status Incompleet. Het ticket wordt dan weer opgenomen in de verzameling tickets die bij de afdeling Applicatieontwikkeling in behandeling is. Daar wordt verder onderzocht waarom het ticketnummer ontbreekt.
+
+Controle databasescript
+Voor het databasescript worden de volgende controles uitgevoerd.
+Op de plaats(en) van de wijziging(en) in het databasescript, of in de tool waarmee de databasestructuur gegenereerd wordt, wordt het ticketnummer vermeld in een commentaarregel, een en ander volgens de coding conventions van Young Dogz.
+Indien de database geen gebruikmaakt van scripts of een tool (zoals MS Access) moeten de wijzigingen in een apart tekstbestand worden genoteerd. In de rootmap van de broncode van de applicatie moeten deze wijzigingen in een tekstbestand met dezelfde naam als de naam van de database en de extensie .dbw worden opgenomen.
+Indien het ticketnummer nog niet voorkomt, maar er wel wijzigingen zijn aangebracht, dan krijgt het ticket de status Incompleet. Het ticket wordt dan weer opgenomen in de verzameling tickets die bij de afdeling Applicatieontwikkeling in behandeling is. Daar wordt verder onderzocht waarom het ticketnummer ontbreekt.
+
+Controle aanpassingendocument
+Voor het aanpassingendocument van een applicatie worden de volgende controles uitgevoerd.
+In het aanpassingendocument moet elk ticketnummer minimaal twee keer voorkomen: in het onderdeel Planning en in het onderdeel Uitvoering. Mogelijk ook nog in het onderdeel Aanpassing.
+Indien het ticketnummer nog niet voorkomt, dan krijgt het ticket de status Incompleet. Het ticket wordt dan weer opgenomen in de verzameling tickets die bij de afdeling applicatieontwikkeling in behandeling is. Daar wordt verder onderzocht waarom het ticketnummer ontbreekt.
+
+Controle testrapport
+Voor het testrapport worden de volgende controles uitgevoerd.
+Er moet minimaal 1 testscenario voor het ticket bestaan. Onder het kopje Functionaliteit in het testscenario moet het ticketnummer vermeld zijn.
+Als het ticketnummer niet in het testrapport voorkomt, dan krijgt het ticket de status Doorgevoerd. Het ticket wordt zodoende weer overgedragen aan het testteam van de supportafdeling dat eerst het testrapport op orde moet brengen.
+
+Afronden ticket
+Als het ticket volledig is doorgevoerd in de applicatiedocumentatie en deze weer volledig en actueel is, dan krijgt het ticket de status Afgerond.
